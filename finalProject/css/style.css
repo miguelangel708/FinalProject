@@ -1,0 +1,115 @@
+
+figure {
+    position: relative;
+    display: inline-block;
+  }
+
+  img {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+
+  figcaption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.8); /* Fondo semi-transparente para legibilidad */
+    padding: 10px;
+    text-align: center;
+    color:#000
+    
+  }
+
+.grid{
+    display: grid;
+    grid-template-columns: 95%;
+    justify-content: space-evenly;
+    row-gap: 10px;
+}
+
+.grid img{
+    width: 100%;
+}
+
+div{
+    border: 1px solid #ccc;
+    padding: 10px;
+}
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    text-align: center;
+  }
+  
+  html, body {
+    scroll-behavior: smooth;
+  }
+  
+  footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #f1f1f1;
+  }
+  
+  footer a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    transition: color 0.3s ease-in-out;
+  }
+  
+  footer a:hover {
+    color: #007bff;
+  }
+  
+  /* Agregar animación de desplazamiento */
+  footer a[href^="#"] {
+    transition: color 0.3s ease-in-out;
+  }
+  
+
+@media screen and (min-width: 772px){
+    
+    .grid{
+        grid-template-columns: 45% 45%;
+        align-items: center;
+    }
+    .grid img{
+        border-radius: 50%;
+    }
+    .grid figure{
+        border-radius: 50%;
+    }
+    figure:last-child{
+        grid-column: span 2;
+
+    }
+}
+
+@media screen and (min-width: 950px){
+   
+    .grid img{
+        border-radius: 0%;
+    }
+    figure:nth-child(3n){
+        grid-column: span 2;
+    }
+}
+
+@media (prefers-color-scheme: dark) {
+    div figure{
+        background-color: #1c1b1b;
+        color: rgba(29, 34, 17, 0.133);
+        border-color: #000;
+        background-color: #000;
+        color: #fff;    
+    }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+    body {
+      scroll-behavior: smooth;
+    }
+  }
